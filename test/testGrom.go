@@ -12,5 +12,5 @@ func main() {
 	if err != nil {
 		panic("failed to connect database")
 	}
-	db.AutoMigrate(&models.Post{}, &models.Comment{})
+	db.AutoMigrate(&models.Post{}, &models.Comment{}, &models.User{})
 }

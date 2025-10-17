@@ -27,7 +27,7 @@ func Router() *gin.Engine {
 		article.POST("/getArticle", service.GetArticleInfo)
 
 		// 修改文章
-		article.POST("/updateArticleList", service.UpdateArticle)
+		article.POST("/updateArticle", service.UpdateArticle)
 
 		// 删除文章
 		article.POST("/deleteArticle", service.DeleteArticle)
