@@ -1,6 +1,7 @@
 package router
 
 import (
+	"golang_task4/middleware"
 	"golang_task4/service"
 
 	"github.com/gin-gonic/gin"
@@ -8,6 +9,9 @@ import (
 
 func Router() *gin.Engine {
 	r := gin.Default()
+
+	// 全局鉴权中间件
+	r.Use(middleware.Auth())
 
 	common := r.Group("/common")
 	{
